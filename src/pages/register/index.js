@@ -70,12 +70,12 @@ export function Register() {
     //console.log('***formValues', formValues);
 
     return (
-        <main>
+        <main className="container">
              <div>
               <img className="imgRegister" src={logoMonsterGrande} alt="icon-register" />
               <h1 className="letra-logo">Monster Burguer</h1>
             </div>
-            <div className="container-register">
+            <div className="div-login">
                 <form className="form" onSubmit={handleSubmit}>
                     <h2>Cadastre-se</h2>
                     <div className="form-register-inputs">
@@ -135,3 +135,5 @@ export function Register() {
         </main>
     );
 };
+
+export default Register

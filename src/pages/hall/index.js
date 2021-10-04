@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from "react-router";
+//import { useHistory } from "react-router";
 
 export const Hall = () => {
 
@@ -9,3 +9,5 @@ export const Hall = () => {
         </div>
     )
 }
+
+export default Hall
