@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react'
-import { useHistory } from 'react-router-dom'
-import logoMonsterPeq from '../../img/logoMonsterPeq.png'
-import notification from '../../img/notification.png'
-import orderIcon from '../../img/orderIcon.png'
-import logout from '../../img/logout.png'
-import '../hall/hall.css'
-import '../kitchen/kitchen.css'
+import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
+import logoMonsterPeq from '../../img/logoMonsterPeq.png';
+import notification from '../../img/notification.png';
+import orderIcon from '../../img/orderIcon.png';
+import logout from '../../img/logout.png';
+import '../hall/hall.css';
+import '../kitchen/kitchen.css';
 
 export function Kitchen() {
   const token = localStorage.getItem('token')
