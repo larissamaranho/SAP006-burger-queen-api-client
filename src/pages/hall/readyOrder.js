@@ -1,4 +1,9 @@
 import React, { useEffect, useState, useCallback } from 'react'
+import { useHistory } from 'react-router-dom';
+import logoMonsterPeq from '../../img/logoMonsterPeq.png';
+import notification from '../../img/notification.png';
+import orderIcon from '../../img/orderIcon.png';
+import logout from '../../img/logout.png';
 import '../kitchen/kitchen.css'
 
 export function ReadyOrder() {
@@ -44,15 +49,46 @@ export function ReadyOrder() {
       })
   }
 
+  const history = useHistory()
+  const handleSignOut = e => {
+    e.preventDefault()
+    history.push('/login')
+    localStorage.clear()
+  }
+
+  const hallOrder = () => { 
+    history.push('/ready-order') 
+  } 
+
+  const hallIcon = () => { 
+    history.push('/hall')
+  }  
+
   return (
     <>
       <div className="hall">
-        <section className="menu">
-          <h1>Pedidos para entregar</h1>
-          <section>
+        <section className="menu-title">
+          <h1 className="menu-kitchen">Pedidos para entregar</h1>
+          </section>
+          <section className="container-kitchen">
+          <section className="menu-side">
+            <button className="logo-small">
+              <img className="logo-small" src={logoMonsterPeq} />
+            </button>
+            <button className="logo-notification" onClick={hallOrder}>
+              <img className="logo-notification" src={notification} />
+            </button>
+            <button className="logo-order" onClick={hallIcon}>
+              <img className="logo-order" src={orderIcon} />
+            </button>
+            <button className="logo-logout" onClick={handleSignOut} >
+              <img className="logo-logout" src={logout} />
+            </button>
+          </section>
+          <section className="container-orders">
             {orderStatus.map((order, index) => {
               return (
-                <section className="menu" key={order.id}>
+                <section className="box-order" key={order.id}>
                   <div className="resume-order">
                     <h1> {order.status.replace('ready', 'Para servir')} </h1>
                     <p>ID: {order.id} </p>

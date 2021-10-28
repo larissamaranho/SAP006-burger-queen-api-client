@@ -58,18 +58,12 @@ export function Kitchen() {
   return (
     <div className="hall">
       <section className="menu-title">
-        <h1 className="menu-kitchen">Pedidos</h1>
+        <h1 className="menu-kitchen">Pedidos Cozinha</h1>
       </section>
         <section className="container-kitchen">
           <section className="menu-side">
             <button className="logo-small">
               <img className="logo-small" src={logoMonsterPeq} />
-            </button>
-            <button className="logo-notification">
-              <img className="logo-notification" src={notification} />
-            </button>
-            <button className="logo-order">
-              <img className="logo-order" src={orderIcon} />
             </button>
             <button className="logo-logout" onClick={handleSignOut} >
               <img className="logo-logout" src={logout} />

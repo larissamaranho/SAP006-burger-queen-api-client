@@ -106,12 +106,12 @@ export function Register() {
                             <option value="cozinha">Cozinha</option>
                         {errors.role && <p className="message-error">{errors.role}</p>}
                         </select>
-                        <Button
-                            className="register-btn"
+                        <button
+                            className="btn-enter"
                             type="submit"
                             value="Cadastrar">
                                 Cadastrar
-                        </Button>
+                        </button>
                         <div className="footer-register">
                             Já tem uma conta cadastrada?
                             <Link className="link" to="/Login"> Entre aqui</Link>

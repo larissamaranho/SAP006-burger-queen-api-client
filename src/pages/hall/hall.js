@@ -96,6 +96,14 @@ export function Hall() {
     localStorage.clear()
   }
 
+  const hallOrder = () => { 
+    history.push('/ready-order') 
+  } 
+
+  const hallIcon = () => { 
+    history.push('/hall')
+  }  
+
     return (
       <div>
         <h1 className="title-hall">Monster Burguer</h1>
@@ -139,8 +147,8 @@ export function Hall() {
         <section className="menu-order">
           <section className="menu-side">
             <button className="logo-small"> <img className="logo-small" src={logoMonsterPeq} /></button>
-            <button className="logo-notification"> <img className="logo-notification" src={notification} /></button>
-            <button className="logo-order"> <img className="logo-order" src={orderIcon} /></button>
+            <button className="logo-notification" onClick={hallOrder}> <img className="logo-notification" src={notification}/></button>
+            <button className="logo-order" onClick={hallIcon}> <img className="logo-order" src={orderIcon} /></button>
             <button className="logo-logout"> <img className="logo-logout" src={logout} onClick={handleSignOut} /></button>
           </section>
           <section className="container-menu">
